@@ -41,3 +41,10 @@ module "acr" {
     acr = var.acr
   
 }
+
+module "aks" {
+    depends_on = [ module.rg ]
+    source = "../../Modules/azurerm_aks"
+    aks = var.aks
+  
+}

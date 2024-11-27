@@ -1,7 +1,7 @@
 rg ={
     rg1 ={
         name = "test-rg"
-        location = "East us"
+         location            = "korea central"
         managed_by = "Terraform"
         tag ={
             env = "QA"
@@ -16,7 +16,7 @@ sa ={
     sa1 = {
         name= "qasa2024"
         resource_group_name = "test-rg"
-        location = "east us"
+         location            = "korea central"
         account_tier = "Standard"
         account_replication_type = "LRS"
         tag ={
@@ -74,7 +74,20 @@ acr = {
   acr = {
     name =  "applicationregistry"
     resource_group_name = "test-rg"
-    location = "east us"
+     location            = "korea central"
     sku ="Standard"
+  }
+}
+########### AKS ###########
+
+aks = {
+  aks1 = {
+    name                = "todo-akscluster"
+    resource_group_name = "test-rg"
+    location            = "korea central"
+    vm_size             = "Standard_D2s_v3"
+    nodepoolnodecount   = 1
+    nodepoolname        = "linuxpool"
+    
   }
 }
