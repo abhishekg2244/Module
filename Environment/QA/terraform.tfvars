@@ -68,3 +68,13 @@ subnet = {
     
   }
 }
+
+######### ACR #########
+acr = {
+  acr = {
+    name =  "applicationregistry"
+    resource_group_name = "test-rg"
+    location = "east us"
+    sku ="Standard"
+  }
+}

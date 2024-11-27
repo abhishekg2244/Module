@@ -72,3 +72,14 @@ variable "subnet" {
         address_prefixes = list(string)
     })) 
 }
+
+########### azure container registry ########
+variable "acr" {
+    type = map(object({
+    name                = string
+    resource_group_name = string
+    location            = string
+    sku                 = string
+    }))
+
+}

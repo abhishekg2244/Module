@@ -34,3 +34,10 @@ module "subnet" {
     source = "../../Modules/azuerm_subnet"
     subnet = var.subnet
 }
+
+module "acr" {
+    depends_on = [ module.rg ]
+    source = "../../Modules/azurerm_azurecontainerregistry"
+    acr = var.acr
+  
+}
